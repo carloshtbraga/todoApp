@@ -1,0 +1,45 @@
+.main-card {
+  display: flex;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: rgb(158, 100, 12);
+  margin-bottom: 10px;
+}
+
+.p-task {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.each-task {
+  width: 90%;
+}
+
+.icons {
+  width: 30px;
+  background-color: none;
+}
+
+.buttonsdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-card {
+  background-color: #696969;;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.button-card:hover {
+  background-color: #494747;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}

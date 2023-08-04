@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
   background: url("../assets/flat-mountains.svg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
 }
 
 .login-container {
@@ -49,16 +50,17 @@ h1 {
   margin-bottom: 20px;
 }
 
-label {
+.label {
   display: block;
   font-weight: bold;
+  font-size: 16px;
   margin-bottom: 8px;
   color: #ffffff;
   font-family: monospace;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-input {
+.input {
   width: 100%;
   padding: 8px 8px 8px 40px; /* Adicionamos mais padding à esquerda para dar espaço ao ícone */
   border: 1px solid #cccccc;
@@ -81,7 +83,7 @@ input {
   background-image: url("../assets/senha.svg");
 }
 
-button {
+.button {
   width: 100%;
   padding: 10px;
   background-color: #63c966;
@@ -95,7 +97,7 @@ button {
   font-weight: 600;
 }
 
-button:hover {
+.button:hover {
   background-color: #45a04a;
   transition: 0.5s;
 }

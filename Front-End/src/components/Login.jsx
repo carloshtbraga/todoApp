@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="body">
         <div className="main">
         <h1>todoApp</h1>
         <img className="todo"src={todo} alt="" />
@@ -47,18 +47,20 @@ const Login = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email:</label>
+          <label className="label">Email:</label>
           <input
             id="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="input"
           />
         </div>
         <div className="form-group">
-          <label>Password:</label>
+          <label className="label">Password:</label>
           <input
+          className="input"
             id="password"
             type="password"
             value={password}
@@ -66,7 +68,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">
+        <button type="submit" className="button">
           {isCreatingUser ? "Criar Usuário" : "Login"}
         </button>
       </form>
