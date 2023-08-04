@@ -8,6 +8,9 @@ export default function TasksCard({
   description,
   completed,
   handleDelete,
+  handleEdit
+
+
 }) {
   return (
     <div className="main-card">
@@ -18,7 +21,7 @@ export default function TasksCard({
     </div>
     <div className="buttonsdiv">
       <button onClick={handleDelete} className="button-card"><img className="icons" src={deleteicon} alt="" /></button>
-      <button className="button-card"><img className="icons" src={edit} alt="" /></button>
+      <button onClick={handleEdit} className="button-card"><img className="icons" src={edit} alt="" /></button>
       </div>
 
     </div>

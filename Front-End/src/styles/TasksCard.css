@@ -43,3 +43,12 @@
   cursor: pointer;
   transition: 0.5s;
 }
+
+
+@media (max-width: 768px) {
+  .icons {
+    width: 20px;
+    background-color: none;
+  }
+ 
+ } 

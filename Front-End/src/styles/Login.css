@@ -61,6 +61,7 @@ h1 {
 }
 
 .input {
+  
   width: 100%;
   padding: 8px 8px 8px 40px; /* Adicionamos mais padding à esquerda para dar espaço ao ícone */
   border: 1px solid #cccccc;
