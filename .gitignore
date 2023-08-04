@@ -1,0 +1,34 @@
+# Arquivos de compilação, como .class, .o, .pyc, etc.
+*.class
+*.o
+*.pyc
+
+# Arquivos de log e cache
+log/
+logs/
+cache/
+npm-debug.log*
+
+# Arquivos de ambiente e configuração
+.env
+.env.local
+.env.*.local
+
+# Dependências e diretórios gerados
+/node_modules
+/dist
+/build
+
+# Arquivos e diretórios específicos para IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de saída de build e binários
+/out/
+/bin/
+
+# Outros arquivos gerados durante o desenvolvimento
+.DS_Store
+Thumbs.db

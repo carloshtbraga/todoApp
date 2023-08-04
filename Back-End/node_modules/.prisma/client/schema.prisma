@@ -1,0 +1,31 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+
+
+model Users {
+  user_id   Int      @id @default(autoincrement())
+  password  String
+  email     String
+  tasks     Tasks[]   // Relacionamento um-para-muitos com o modelo Task
+}
+
+
+model Tasks {
+  task_id    Int      @id @default(autoincrement())
+  task_name  String
+  task_description  String?
+  task_completed  Boolean @default(false)
+  created_at  DateTime @default(now())
+
+  // Relacionamento muitos-para-um com o modelo User
+  user    Users   @relation(fields: [user_id], references: [user_id])
+  user_id Int
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}

@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../assets/flat-mountains.svg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: url("../assets/liquid-cheese.svg");
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 350px;
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+h2 {
+  font-family: monospace;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: monospace;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-family: monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  width: 100%;
+  padding: 8px 8px 8px 40px; /* Adicionamos mais padding à esquerda para dar espaço ao ícone */
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 8px center; /* Posicionamos o ícone no início do input */
+  background-size: 18px; /* Tamanho do ícone */
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #757474;
+}
+
+/* Adicione os ícones aos inputs */
+#email {
+  background-image: url("../assets/email.svg");
+}
+
+#password {
+  background-image: url("../assets/senha.svg");
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #63c966;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #45a04a;
+  transition: 0.5s;
+}
+
+.button2 {
+  width: 100%;
+  padding: 10px;
+  background-color: #8f3ba0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.button2:hover {
+  background-color: #520f63;
+  transition: 0.5s;
+}
+
+.todo {
+  width: 60px;
+}
+
+.error {
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
