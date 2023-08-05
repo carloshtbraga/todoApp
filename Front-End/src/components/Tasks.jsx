@@ -165,7 +165,12 @@ const Tasks = () => {
             value={newDescription}
           />
         </label>
-        <button className="add" type="submit" onClick={handleSubmit}>
+        <button
+          className="add"
+          type="submit"
+          disabled={newDescription.length < 8 || newName.length < 5}
+          onClick={handleSubmit}
+        >
           Criar Tarefa
         </button>
       </form>

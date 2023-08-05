@@ -2,18 +2,13 @@ const express = require("express");
 const { PrismaClient } = require("@prisma/client");
 const router = express.Router();
 const validateToken = require("../middlewares/validateToken");
+const validateUserPermission = require("../middlewares/validateUserPermission");
 
 const prisma = new PrismaClient();
 
 router.get("/users/:id/tasks", validateToken, async (req, res) => {
   try {
     const { id } = req.params;
-    const user_id = req.user.user_id; // Obtém o user_id do usuário autenticado
-
-    if (Number(id) !== user_id) {
-      return res.status(403).json({ error: "You don't have permission." });
-    }
-
     // Busca as tasks do usuário específico
     const tasks = await prisma.tasks.findMany({
       where: {
@@ -30,14 +25,7 @@ router.get("/users/:id/tasks", validateToken, async (req, res) => {
 
 router.get("/users/:id", validateToken, async (req, res) => {
     try {
-      const { id } = req.params;
-      const user_id = req.user.user_id; // Obtém o user_id do usuário autenticado
-  
-      // Verifica se o usuário autenticado é o mesmo usuário que está sendo buscado
-      if (Number(id) !== user_id) {
-        return res.status(403).json({ error: "You don't have permission." });
-      }
-  
+      const { id } = req.params;  
       // Busca os detalhes do usuário
       const user = await prisma.users.findUnique({
         where: {
